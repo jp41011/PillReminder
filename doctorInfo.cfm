@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Pill Reminder App</title>
+    <title>Doctor Info</title>
 	
 	<script src='./include/jquery-3.1.1.min.js'></script>
 
@@ -31,10 +31,20 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	
+	<!--- for slider --->
+	<link href='./include/bootstrap-switch.min.css' rel='stylesheet'>
+	<script src='./include/bootstrap-switch.min.js'></script>
+	
+	<!--- another try --->
+	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+	<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+	
+
 	<script>
 		$(document).ready(function(){
 			console.log('jquery ready');
 			//BootstrapDialog.alert('I want an Apple'); // not defined need to find and add
+			$("[name='my-checkbox']").bootstrapSwitch();
 		});
 	</script>
 	<style>
@@ -56,42 +66,64 @@
 		.theme-showcase .navbar .container {
 		width: auto;
 		}
+
+		.tableDocInfo{
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.tableDocInfo td{
+			padding-top: 0.5em;
+			padding-bottom: 0.5em;
+		}
 	</style>
   </head>
   <body>
 	<!--- header / nav bar --->
 	<cfinclude template='header.cfm'/>
+	<div style='text-align:center;'>
+	    <h1><i class="fa fa-user-md" aria-hidden="true"></i><br/>Doctor Info</h1>
+	</div>
+	<table class='tableDocInfo'>
+		<tr>
+			<td><i class="fa fa-user-md fa-2x" aria-hidden="true"></td>
+			<td><input type="text" placeholder="Doctor Name" value='Dr. Jane Doe' class="form-control"></td>
+		</tr>
+		<tr>
+			<td><i class="fa fa-envelope" aria-hidden="true"></i></td>
+			<td><input type="text" placeholder="Doctor Email" value='DrJaneDoe@Practice.com' class="form-control"></td>
+			<td><i class="fa fa-reply" aria-hidden="true"></i></td>
+		</tr>
+		<tr>
+			<td><i class="fa fa-phone fa-2x" aria-hidden="true"></i></td>
+			<td><input type="text" placeholder="Office Phone" value='555-123-4567' class="form-control"></td>
+		</tr>
+		<tr>
+			<td><i class="fa fa-mobile fa-2x" aria-hidden="true"></i></td>
+			<td><input type="text" placeholder="Mobile Phone" value='555-987-6543' class="form-control"></td>
+		</tr>
+		<tr>
+			<td><i class="fa fa-map-marker fa-2x" aria-hidden="true"></i></td>
+			<td><input type="text" placeholder="Office Address" value='123 N Fake st. Fresno CA' class="form-control"></td>
+		</tr>
+		<tr>
+			<td><i class="fa fa-bell-o fa-2x" aria-hidden="true"></i></td>
+			<td>
+				Appointment Redminder:
+				 <input type="checkbox" checked data-toggle="toggle">
+			</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>
+				<button type="button" class="btn btn-lg btn-primary" onClick="window.location.href='index.cfm'">
+					<i class="fa fa-floppy-o" aria-hidden="true"></i>
+					Save
+				</button>
+			</td>
+		</tr>
+	</table>
 
-    <h1>Pill Reminder App</h1>
-	<button type="button" class="btn btn-lg btn-default" onClick="window.location.href='doctorInfo.cfm'">
-		<i class="fa fa-user-md" aria-hidden="true"></i>
-		Doctor Info
-	</button>
-	&nbsp;&nbsp;
-	<button type="button" class="btn btn-lg btn-primary" onClick="window.location.href='medication.cfm'">
-		<i class="fa fa-plus-circle" aria-hidden="true"></i>
-		Medication
-	</button>
-	<br/><br/>
-	<button type="button" class="btn btn-lg btn-default" onClick="window.location.href='insurance.cfm'">
-		<i class="fa fa-id-card-o" aria-hidden="true"></i>
-		Insurance
-	</button>
-	&nbsp;&nbsp;
-	<button type="button" class="btn btn-lg btn-info" onClick="window.location.href='medHistory.cfm'">
-		<i class="fa fa-line-chart" aria-hidden="true"></i>
-		History 
-	</button>
-	
-	<!---<button type="button" class="btn btn-lg btn-link">Link</button> --->
 
-	<br/><br/><br/><br/>
-	<h3>Medication Progress</h3>
-	<div class="progress">
-        <div class="progress-bar progress-bar-success" style="width: 35%"><span class="sr-only">35% Complete (success)</span></div>
-        <div class="progress-bar progress-bar-warning" style="width: 20%"><span class="sr-only">20% Complete (warning)</span></div>
-        <div class="progress-bar progress-bar-danger" style="width: 10%"><span class="sr-only">10% Complete (danger)</span></div>
-    </div>
 	<!--- bottom --->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
