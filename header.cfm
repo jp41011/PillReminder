@@ -27,7 +27,7 @@
 			<li><a href="doctorInfo.cfm"><i class="fa fa-user-md" aria-hidden="true"></i>Doctor Info</a></li>
 			<li><a href="insurance.cfm"><i class="fa fa-id-card-o" aria-hidden="true"></i>Insurance Info</a></li>
 			<li><a href="medication.cfm"><i class="fa fa-plus-circle" aria-hidden="true"></i>Medication</a></li>
-			<li><a href="medHistory.cfms"><i class="fa fa-line-chart" aria-hidden="true"></i>Medication History</a></li>
+			<li><a href="medHistory.cfm"><i class="fa fa-line-chart" aria-hidden="true"></i>Medication History</a></li>
 			<li><a href="signIn.cfm"><i class="fa fa-sign-out" aria-hidden="true"></i>Sign Out</a></li>
 			<!---
 			<li class="dropdown">
