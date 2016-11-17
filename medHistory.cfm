@@ -44,7 +44,16 @@
 		$(document).ready(function(){
 			console.log('jquery ready');
 			//BootstrapDialog.alert('I want an Apple'); // not defined need to find and add
-			$("[name='my-checkbox']").bootstrapSwitch();
+			//$("[name='my-checkbox']").bootstrapSwitch();
+			/*
+			BootstrapDialog.show({
+				message: 'Hi Apple!'
+			});
+			*/
+			$('#myModal').on('shown.bs.modal', function () {
+				$('#myInput').focus()
+			});
+
 		});
 	</script>
 	<style>
@@ -100,7 +109,7 @@
 			<td><i class="fa fa-heart-o" aria-hidden="true"></i></td>
 			<td><input type="text" placeholder="Medicine Name" value='Plavix' class="form-control"></td>
 			<td><input type="text" placeholder="Dosage" value='15mg' class="form-control"></td>
-			<td><input type="text" placeholder="Frequency" value='1 x Day' class="form-control"></td>
+			<td><input type="text" placeholder="Frequency" value='2 x Day' class="form-control"></td>
 		</tr>
 	</table>
 	<!---
@@ -112,6 +121,32 @@
 		</button>
 	</div>	
 	--->
+
+	<div style='text-align:center;'>
+		<!-- Button trigger modal -->
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+		Example Reminder
+		</button>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title" id="myModalLabel">Medication Reminder</h4>
+		</div>
+		<div class="modal-body">
+			Remeber to take Plavix 2 x day. Once in the morning and once in the evening.
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal">Snooze</button>
+			<button type="button" class="btn btn-primary" data-dismiss="modal">Confirm</button>
+		</div>
+		</div>
+	</div>
+	</div>
+
 
 	<!--- bottom --->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
