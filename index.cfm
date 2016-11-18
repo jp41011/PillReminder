@@ -35,6 +35,15 @@
 		$(document).ready(function(){
 			console.log('jquery ready');
 			//BootstrapDialog.alert('I want an Apple'); // not defined need to find and add
+			$('#myModal').on('shown.bs.modal', function () {
+				$('#myInput').focus()
+			});
+			
+			// not the best way to do this but this is just to demo the idea
+			setTimeout(function(){
+				$('#btnReminder').click();
+			}, 3000);
+			
 		});
 	</script>
 	<style>
@@ -112,6 +121,31 @@
 			</tr>
 		</table>
 	</div>
+
+	<button type="button" id='btnReminder' class="btn btn-primary btn-lg" style='display:none;' data-toggle="modal" data-target="#myModal"></button>
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Medication Reminder</h4>
+			</div>
+			<div class="modal-body">
+				<span style='font-weight:bold;'>
+					Remeber to take Plavix 2 x day. Once in the morning and once in the evening.
+				</span>
+				<br/>
+				(Snooze will remind you in 5min)
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Snooze</button>
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Confirm</button>
+			</div>
+			</div>
+		</div>
+	</div>
+
 	<!--- bottom --->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
