@@ -105,6 +105,11 @@
 	</table>
 	<br/><br/>
 	<div style='text-align:center'>
+		<button type="button" class="btn btn-lg btn-danger">
+			<i class="fa fa-minus" aria-hidden="true"></i>
+			Delete Med
+		</button>
+		&nbsp;&nbsp;&nbsp;&nbsp;
 		<button type="button" class="btn btn-lg btn-default">
 			<i class="fa fa-plus-square" aria-hidden="true"></i>
 			Add Med

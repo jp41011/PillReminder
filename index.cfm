@@ -92,6 +92,26 @@
         <div class="progress-bar progress-bar-warning" style="width: 20%"><span class="sr-only">20% Complete (warning)</span></div>
         <div class="progress-bar progress-bar-danger" style="width: 10%"><span class="sr-only">10% Complete (danger)</span></div>
     </div>
+
+	<div style='text-align:center;'>
+		<table style='margin-left:auto; margin-right:auto;'>
+			<tr><td colspan='3'><b>Medication Key</b></td></tr>
+			<tr>
+				<td>
+					<div style='display:inline; background:#50ab50; width:5px; height:5px;' >&nbsp;&nbsp;&nbsp;&nbsp;</div>
+					Taken &nbsp;&nbsp;&nbsp;
+				</td>
+				<td>
+					<div style='display:inline; background:#eea43a; width:5px; height:5px;' >&nbsp;&nbsp;&nbsp;&nbsp;</div>
+					Yet to take &nbsp;&nbsp;&nbsp;
+				</td>
+				<td>
+					<div style='display:inline; background:#d74f4b; width:5px; height:5px;' >&nbsp;&nbsp;&nbsp;&nbsp;</div>
+					Not Taken &nbsp;&nbsp;&nbsp;
+				</td>
+			</tr>
+		</table>
+	</div>
 	<!--- bottom --->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
